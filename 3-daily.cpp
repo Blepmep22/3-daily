@@ -14,17 +14,37 @@ string exOne(string strOne, int numOne, int i) {
 
 string exTwo(int numTwo, string strTwo, int i) {
 
+	char komma = ',';
 	while (i <= numTwo) {
-		strTwo += to_string(i);
+		strTwo += to_string(i) + komma;
 		i++;
 	}
 	return strTwo;
 }
 
+string exThree(int numThree, string strThree, int i) {
+
+	char komma = ',';
+	while (numThree >=i) {
+		strThree += to_string(numThree) + komma;
+		numThree--;
+	}
+	return strThree;
+}
+
+int exFour(int numFour) {
+	
+	int factorial = 1;
+	for (int a = 1; a <= numFour; a++) {
+		factorial = factorial * a;
+	}
+	return factorial;
+}
+
 int main()
 {
-	string strOne, strTwo;
-	int i = 0, numOne, numTwo;
+	string strOne, strTwo, strThree;
+	int i = 0, numOne, numTwo, numThree, numFour;
 
 	cout << "---Ex. 1---" << endl;
 	cout << "Enter a word" << endl;
@@ -37,4 +57,14 @@ int main()
 	cout << "Enter a number" << endl;
 	cin >> numTwo;
 	cout << exTwo(numTwo, strTwo, i) << endl;
+
+	cout << "---Ex. 3---" << endl;
+	cout << "Enter a number" << endl;
+	cin >> numThree;
+	cout << exThree(numThree, strThree, i) << endl;
+
+	cout << "---Ex. 4---" << endl;
+	cout << "Enter a number" << endl;
+	cin >> numFour;
+	cout << exFour(numFour) << endl;
 }
