@@ -14,9 +14,9 @@ string exOne(string strOne, int numOne, int i) {
 
 string exTwo(int numTwo, string strTwo, int i) {
 
-	while (i < numTwo) {
-		i++;
+	while (i <= numTwo) {
 		strTwo += to_string(i);
+		i++;
 	}
 	return strTwo;
 }
