@@ -16,8 +16,12 @@ string exTwo(int numTwo, string strTwo, int i) {
 
 	char komma = ',';
 	while (i <= numTwo) {
-		strTwo += to_string(i) + komma;
+		strTwo += to_string(i);
 		i++;
+	
+		//if (i < numTwo) {
+			//strTwo + komma;
+		//}
 	}
 	return strTwo;
 }
